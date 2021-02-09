@@ -42,12 +42,13 @@
   background-image: linear-gradient(170deg, #3329ff, #060895);
   color: #fff;
   padding: 3rem;
-  height: 30rem;
+  min-height: 30rem;
+
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 .project .content {
-  flex-shrink: 1.3;
+  width: 80%;
   display: flex;
   flex-direction: column;
   /* border: 1px solid green; */
@@ -66,11 +67,24 @@
   margin-bottom: 2rem;
 }
 .project .content p {
-  color: #aaa; 
+  color: #bbb; 
   font-size: 1.2rem;
   font-family: Nexa-Light;
   letter-spacing: 1px;
-  line-height: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+.project .content p span,
+.project .content p a{
+  color: #fff;
+  font-weight: bold;
+}
+.project .content p a{
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+  text-decoration: underline;
+}
+.project .content p a:hover{
+  opacity: 0.8;
 }
 .project .content ul {
   list-style: none;
