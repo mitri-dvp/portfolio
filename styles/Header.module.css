@@ -1,0 +1,25 @@
+.wrapper {
+  display: block;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  padding: 0 5rem;
+  max-width: 70rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* border: 1px solid green; */
+}
+
+.wrapper nav {
+  height: 5rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.wrapper nav p:first-child {
+  margin-right: auto;
+}
+.wrapper nav p:hover {
+  opacity: 0.8;
+}
