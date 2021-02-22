@@ -1,11 +1,12 @@
-.section {}
 .wrapper {
-  padding: 5rem 5rem;
+  padding: 5rem;
+  /* padding-bottom: 0; */
   max-width: 70rem;
   margin: auto;
 }
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   position: relative;
   width: max-content;
   margin: auto;
@@ -18,19 +19,19 @@
   display: block;
   bottom: -1rem;
   height: 0.3rem;
-  width: 30%;
+  width: 3rem;
   position: absolute;
   left: 0;
 }
 
 .projects_wrapper {
-  margin-top: 9.5rem;
+  margin-top: 7rem;
 }
 
 .projects_wrapper {
   display: grid;
   justify-content: center;
-  gap: 7.5rem;
+  gap: 5rem;
 }
 .project {
   border-radius: 0rem;
@@ -42,10 +43,16 @@
   background-image: linear-gradient(170deg, #3329ff, #060895);
   color: #fff;
   padding: 3rem;
-  min-height: 30rem;
-
+  min-height: 20rem;
   display: flex;
   gap: 2rem;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+}
+.project.show {
+  opacity: 1;
+  transform: translateY(0%);
 }
 .project .content {
   width: 80%;

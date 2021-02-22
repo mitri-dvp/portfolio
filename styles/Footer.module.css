@@ -1,5 +1,83 @@
 .wrapper {
   background-color: #333;
+  background-color: #060895;
+  background-color: #030443;
+  background-color: #010223;
+  background-color: #040435;
+  
   color: #f4f4f4;
-  min-height: 100vh;
+  font-family: Nexa-Light;
+  position: relative;
+  margin-top: 5rem;
+  padding: 5rem 12rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  font-family: Nexa-Bold;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  height: fit-content;
+}
+.logo_wrapper img {
+  height: 5rem;
+}
+
+.bars > div {
+  margin-left: auto;
+
+}
+.bars > div > p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: Nexa-Bold;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.bars > div > p::after {
+  content: '';
+  background-color: #f4f4f4;
+  display: block;
+  bottom: -0.5rem;
+  height: 0.1rem;
+  width: 2rem;
+  position: absolute;
+  left: 0;
+}
+.bars .lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.bars .lists ul {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.bars .lists li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bars svg {
+  fill:#f4f4f4
+}
+.bars img {
+  max-height: 1.25rem;
+  max-width: 1.25rem;
+  overflow: hidden;
+}
+
+.bars a:hover {
+  opacity: 0.8;
+}
+
+.copy {
+  margin-top: 2rem;
 }

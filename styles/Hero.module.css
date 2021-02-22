@@ -25,11 +25,24 @@
   animation: icon-left 5s infinite;
   left: 18%;
   transform: translateY(12%);
+  transition: opacity .4s cubic-bezier(.25,.46,.45,.94), left .3s cubic-bezier(.25,.46,.45,.94);
+}
+.image_wrapper img.a_left {
+  left: 15%;
+  opacity: 0;
 }
 .image_wrapper img:last-child {
+  opacity: 1;
   left: 25%;
   transform: translateY(-12%);
   animation: icon-right 5s infinite;
+  transition: opacity .4s cubic-bezier(.25,.46,.45,.94), left .3s cubic-bezier(.25,.46,.45,.94);
+
+
+}
+.image_wrapper img.a_right {
+  left: 28%;
+  opacity: 0;
 }
 
 .content {
@@ -47,6 +60,8 @@
 .content p {
   font-family: Nexa-Light;
 }
+
+
 
 /* ANIMATION */
 

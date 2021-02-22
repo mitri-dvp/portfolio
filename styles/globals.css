@@ -27,13 +27,14 @@ body {
   color: #060895;
   color: #332980;
   color: #3329ff;
+  scroll-behavior: smooth;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
-
 * {
   box-sizing: border-box;
 }

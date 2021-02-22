@@ -3,23 +3,101 @@
   width: 100%;
   z-index: 10;
   position: absolute;
-  padding: 0 5rem;
-  max-width: 70rem;
+  padding: 0 12rem;
   left: 50%;
   transform: translateX(-50%);
   /* border: 1px solid green; */
 }
 
-.wrapper nav {
+.wrapper nav ul {
+  list-style: none;
   height: 5rem;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;  
   align-items: center;
+  text-transform: uppercase;
 }
-.wrapper nav p:first-child {
-  margin-right: auto;
+.wrapper nav li:first-child a{
+  display: flex;
 }
-.wrapper nav p:hover {
+.wrapper nav li:first-child p{
+  align-self: center;
+  letter-spacing: 0px;
+  font-size: 1.25rem;
+}
+.wrapper nav li:first-child img {
+  margin: unset;
+}
+.wrapper nav li:first-child {
+  height: 100%;
+  margin: auto auto auto 0;
+  display: flex;
+  text-transform: none;
+}
+.wrapper nav li:last-child a {
+  background-color: #3329ff;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.9rem;
+  padding: 0.75rem 2rem;
+  border-radius: 5rem;
+}
+.wrapper nav li:hover {
   opacity: 0.8;
+}
+.wrapper nav img {
+  height: 100%;
+  width: 6.5rem;
+  background-color: #040435;
+  padding: 0 1rem;
+}
+
+.side_nav ul {
+  display: grid;
+  gap: 0.1rem;
+  list-style: none;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  font-size: 1rem;
+  transform: translateX(100%) translateY(-0%);
+  transition: transform .2s cubic-bezier(.25,.46,.45,.94);
+  z-index: 1;
+}
+.side_nav_fixed ul {
+  transform: translateX(0%) translateY(-0%);
+}
+.side_nav ul li {
+  background-color: #3329ff;
+  background-color: #060895;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  font-family: Nexa-Light;
+  transform: translateX(100%);
+  transition: transform .2s cubic-bezier(.25,.46,.45,.94);
+}
+.side_nav_open ul li {
+  transform: translateX(0%);
+}
+.side_nav ul li a {
+  display: block;
+}
+.side_nav ul button img {
+  height: 100%;
+  width: 100%;
+}
+.side_nav ul button {
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  background: 0;
+  border: 0;
+  /* background: #040435; */
+  /* background: #040435; */
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  outline: none;
 }
