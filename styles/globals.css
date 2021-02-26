@@ -12,6 +12,12 @@
   font-weight: 400;
   font-display: swap;
 }
+
+:root {
+  /* "Zoom" */
+  font-size: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +34,11 @@ body {
   color: #332980;
   color: #3329ff;
   scroll-behavior: smooth;
+}
+body.modal-open {
+  position: relative;
+  overflow-y: hidden;
+  margin-right: 16px;
 }
 
 a {

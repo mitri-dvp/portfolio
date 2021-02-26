@@ -1,12 +1,11 @@
 import {useEffect, useState} from 'react'
-import styles from '../../styles/Hero.module.css'
+import styles from '../styles/Hero.module.css'
 
 export default function Hero() {
 
   const [start, setStart] = useState(true)
 
   useEffect(() => {
-
     setTimeout(() => {
       setStart(false)
     }, 500);

@@ -1,51 +1,27 @@
-import styles from '../../styles/Tools.module.css'
+import { useRef } from 'react'
+import styles from '../styles/Tools.module.css'
+
+import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
 
 export default function Tools() {
+  const toolsRef = useRef()
+
+  useScrollPosition(({ currPos }) => {
+    if(currPos.y - window.innerHeight + 240 < 0) {
+      toolsRef.current.classList.add(styles.active)
+    }
+  }, [], toolsRef)
+
+
   return (
     <section className={styles.section} id='tools'>
       <div className={styles.wrapper}>
+
         <h1 className={styles.title}>Tools</h1>
         <p className={styles.sub_title}>These are the Technologies that I've worked or I'm familiar with. They are used to build any sort of project, I choose and select the most appropiate stack!</p>
-        {/* 
-          Rename to Technologies? Tools?
-          Languages?
-          o JavaScript
-          o HTML
-          o CSS
-          o SQL
-          
-          TypeScript
-          GraphQL
 
-          DBs
-          o MongoDB <- DB
-          o PostgreSQL <- DB
-          o MariaDB <- DB
-
-          Frameworks
-          o Bootstrap <- CSS Framework
-          Tailwind <- CSS Framework
-          Materialyze <- CSS Framework
-          o React <- Front-End Framework
-          o Next <- Front-End Framework
-
-          Node <- Programming Language
-          Express <- API Framework
-          Electron <- Desktop Framework
-          
-          STACKS
-          MERN
-          - o Mongo <- DB
-          - Express <- API Framework
-          - o React <- Front-End Framework
-          - o Node <- Programming Language
-
-          JAM
-          - o NextJS <- Front-End Framework
-          - o Strapi <- API Framework
-        */}
-
-        <div className={styles.tools_wrapper}>
+        <div ref={toolsRef} className={`${styles.tools_wrapper}`}>
+          <div className={styles.circle}></div>
           <div className={styles.row}>
             <div>
               <img src="/svgs/tools/strapi-logo.svg" alt="strapi-logo"/>
@@ -62,8 +38,11 @@ export default function Tools() {
               <img src="/svgs/tools/bootstrap-logo.svg" alt="bootstrap-logo"/>
             </div>
             <div>
-              <img src="/svgs/tools/unofficial-javascript-logo-2.svg" alt="unofficial-javascript-logo-2"/>
+              <img src="/svgs/tools/typescript-logo.svg" alt="typescript-logo"/>
             </div>
+            {/* <div>
+              <img src="/svgs/tools/unofficial-javascript-logo-2.svg" alt="unofficial-javascript-logo-2"/>
+            </div> */}
             <div>
               <img src="/svgs/tools/react-logo.svg" alt="react-logo"/>
             </div>
@@ -72,7 +51,7 @@ export default function Tools() {
             </div>
           </div>
           <div className={styles.row}>
-          <div>
+            <div>
               <img src="/svgs/tools/mongodb-logo.svg" alt="mongodb-logo"/>
             </div>
             <div>
@@ -83,7 +62,6 @@ export default function Tools() {
             </div>
           </div>
         </div>
-        
       </div>
     </section>
   )

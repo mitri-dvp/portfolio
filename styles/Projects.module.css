@@ -81,7 +81,7 @@
   line-height: 1.75rem;
   margin-bottom: 2.5rem;
 }
-.project .content p span,
+.project .content p strong,
 .project .content p a{
   color: #fff;
   font-weight: bold;

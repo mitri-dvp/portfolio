@@ -1,0 +1,133 @@
+.wrapper {
+  position: fixed;
+  display: grid;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  padding-left: 16px;
+  background-color: #00000080;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .25s cubic-bezier(.25,.46,.45,.94), z-index .25s cubic-bezier(.25,.46,.45,.94);
+  overflow-y: auto;
+}
+
+.wrapper.active {
+  padding-left: 0px;
+  opacity: 1;
+  z-index: 11;
+}
+
+.wrapper .body_wrapper {
+  width: max-content;
+  height: max-content;
+  margin: auto;
+}
+.wrapper .body {
+  display: grid;
+  align-items: center;
+  position: relative;
+  /* background-image: linear-gradient(170deg, #3329ff, #060895); */
+  /* background-image: linear-gradient(170deg, #fff, #fff); */
+  background-color: #fff;
+  width: 40rem;
+  /* min-height: 30rem; */
+  padding: 5rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  transform: translateY(-10vh);
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+}
+
+.wrapper.active .body {
+  transform: translateY(0%);
+}
+
+
+.wrapper .exit img {
+  height: 100%;
+  width: 100%;
+}
+.wrapper .exit{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+
+  background-color: transparent;
+  border: 0;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  width: max-content;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  /* border: 1px solid #3329ff; */
+}
+
+.sub_title {
+  font-size: 1.25rem;
+  font-family: Nexa-Light;
+  margin-bottom: 1rem;
+}
+.sub_title a{
+  color: #060895;
+  text-decoration: underline;
+}
+
+/* FORM */
+.form {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.form .head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.form textarea, 
+.form input {
+  width: 100%;
+  font-family: Nexa-Light;
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-left: 0;
+  border: 0;
+  border-bottom: 1px solid #060895;
+  outline: none;
+}
+.form label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form button {
+  text-transform: uppercase;
+  font-family: Nexa-Bold;
+  letter-spacing: 1px;
+  background-color: #3329ff;
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  padding: 0.75rem 2rem;
+  border-radius: 5rem;
+  border: 0;
+  cursor: pointer;
+}
+.form button:hover {
+}

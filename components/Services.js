@@ -1,4 +1,4 @@
-import styles from '../../styles/Services.module.css'
+import styles from '../styles/Services.module.css'
 
 export default function Services() {
   return (
@@ -11,63 +11,63 @@ export default function Services() {
           <div className={styles.icon}>
             <img src="/svgs/services/development.svg" alt="development-icon"/>
           </div>
-          <p>Website Development</p>
+          <h3>Website Development</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/uiux.svg" alt="uiux-icon"/>
           </div>
-          <p>UI/UX</p>
+          <h3>UI/UX</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/landing.svg" alt="landing-icon"/>
           </div>
-          <p>Landing Pages</p>
+          <h3>Landing Pages</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/blog.svg" alt="blog-icon"/>
           </div>
-          <p>Blog</p>
+          <h3>Blog</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/ecommerce.svg" alt="ecommerce-icon"/>
           </div>
-          <p>E-commerce</p>
+          <h3>E-commerce</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/cms.svg" alt="cms-icon"/>
           </div>
-          <p>CMS</p>
+          <h3>CMS</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/apps.svg" alt="apps-icon"/>
           </div>
-          <p>Web Applications</p>
+          <h3>Web Applications</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/chat.svg" alt="chat-icon"/>
           </div>
-          <p>Chat</p>
+          <h3>Chat</h3>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/prototyping.svg" alt="prototyping-icon"/>
           </div>
-          <p>Prototyping</p>
+          <h3>Prototyping</h3>
         </li>
 
         </ul>

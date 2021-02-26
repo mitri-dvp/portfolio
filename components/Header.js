@@ -1,29 +1,41 @@
-import { useContext, useEffect, useState } from 'react'
-import styles from '../../styles/Header.module.css'
+import { useState } from 'react'
+import styles from '../styles/Header.module.css'
 
-import WindowContext from '../context/WindowContext'
+import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
+import LetsTalk from './LetsTalk';
 
 export default function Header() {
   const [fixed, setFixed] = useState(false)
   const [open, setOpen] = useState(true)
-  const { scrollY } = useContext(WindowContext);
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = async (open) => {
+    if(open) {
+      document.body.classList.add('modal-open')
+      setShowModal(true)
+    } else {
+      document.body.classList.remove('modal-open')
+      setShowModal(false)
+    }
+  }
+
+  useScrollPosition(({ currPos }) => {
+    if((currPos.y*-1) > window.innerHeight - 16*6) {
+      setFixed(true)
+    } else {
+      setFixed(false)
+    }
+  })
 
   const goToSection = (e, section) => {
     e.preventDefault()
     if(!document.querySelector(section)) return
     scrollTo(0, document.querySelector(section).offsetTop - 16*0)
   }
-
-  useEffect(() => {
-    if(scrollY > window.innerHeight - 16*6) {
-      setFixed(true)
-    } else {
-      setFixed(false)
-    }
-  }, [scrollY])
   
   return (
     <>
+    <LetsTalk props={{showModal, openModal}}/>
     <div className={`${styles.wrapper}`}>
       <nav>
       <ul>
@@ -36,9 +48,10 @@ export default function Header() {
         <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
         <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
         <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>tools</a></li>
+        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>games</a></li>
         {/* <a>Games</a> */}
         {/* <a>About</a> */}
-        <li><a>Let's Talk</a></li>
+        <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
       </ul>
       </nav>
     </div>
@@ -46,13 +59,14 @@ export default function Header() {
     <nav>
       <ul>
         <button onClick={(e) => setOpen(!open)}><img src="/icon.svg" alt="mitri-dvp-logo"/></button>
-        <li><a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>Home</a></li>
+        <li><a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>Top</a></li>
         <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
         <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
         <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
+        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>games</a></li>
         {/* <a>Games</a>
         <a>About</a> */}
-        <li><a>Let's Talk</a></li>
+        <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
       </ul>
       </nav>
     </div>
