@@ -8,7 +8,7 @@ export default function Hero() {
   useEffect(() => {
     setTimeout(() => {
       setStart(false)
-    }, 500);
+    }, 0);
   }, [])
 
   return (
