@@ -1,10 +1,16 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 
+
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, window.scrollY +1)
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <Head>
