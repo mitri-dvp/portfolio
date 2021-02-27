@@ -43,7 +43,7 @@ export default function Projects() {
             <div className={styles.content}>
               <h1>Hasbaya</h1>
               <h2>#CRUD Application</h2>            
-              <p>A custom <strong>CMS</strong> solution for my parent's restaurant, with a simple and effective layout, featuring a <strong>Lebanese</strong> design from <a target="_blank" href="https://www.instagram.com/mitri.gd/">mitri.gd</a>. It allows the admin user to manage <strong>Clients</strong>, <strong>Products</strong>, and <strong>Orders</strong> data.</p>
+              <p>A custom <strong>CMS</strong> solution for my parent's restaurant, with a simple and effective layout, featuring a <strong>Lebanese</strong> design from <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mitri.gd/">mitri.gd</a>. It allows the admin user to manage <strong>Clients</strong>, <strong>Products</strong>, and <strong>Orders</strong> data.</p>
               <ul>
                 <li>Node</li>
                 <li>Express</li>
