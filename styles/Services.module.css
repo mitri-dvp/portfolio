@@ -38,9 +38,11 @@
 .services_wrapper > li {
   margin: auto;
   text-align: center;
-  font-size: 0.9rem;
   cursor: default;
   user-select: none;
+}
+.services_wrapper > li h2 {
+  font-size: 1rem;
 }
 .services_wrapper > li .icon {
   content: '';

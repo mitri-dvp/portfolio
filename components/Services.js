@@ -11,63 +11,63 @@ export default function Services() {
           <div className={styles.icon}>
             <img src="/svgs/services/development.svg" alt="development-icon"/>
           </div>
-          <h3>Website Development</h3>
+          <h2>Website Development</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/uiux.svg" alt="uiux-icon"/>
           </div>
-          <h3>UI/UX</h3>
+          <h2>UI/UX</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/landing.svg" alt="landing-icon"/>
           </div>
-          <h3>Landing Pages</h3>
+          <h2>Landing Pages</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/blog.svg" alt="blog-icon"/>
           </div>
-          <h3>Blog</h3>
+          <h2>Blog</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/ecommerce.svg" alt="ecommerce-icon"/>
           </div>
-          <h3>E-commerce</h3>
+          <h2>E-commerce</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/cms.svg" alt="cms-icon"/>
           </div>
-          <h3>CMS</h3>
+          <h2>CMS</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/apps.svg" alt="apps-icon"/>
           </div>
-          <h3>Web Applications</h3>
+          <h2>Web Applications</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/chat.svg" alt="chat-icon"/>
           </div>
-          <h3>Chat</h3>
+          <h2>Chat</h2>
         </li>
 
         <li>
           <div className={styles.icon}>
             <img src="/svgs/services/prototyping.svg" alt="prototyping-icon"/>
           </div>
-          <h3>Prototyping</h3>
+          <h2>Prototyping</h2>
         </li>
 
         </ul>

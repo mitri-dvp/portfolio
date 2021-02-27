@@ -26,7 +26,7 @@ export default function LetsTalk({ props }) {
         </button>
         <h1 className={styles.title}>Let's Talk!</h1>
         <p className={styles.sub_title}>
-          Feel free to send me a message! I answer any request in a timely manner.  If you want to contact me faster, please send me a <a target="_blank" href="https://t.me/mitri_dvp">Telegram</a>.
+          Feel free to send me a message! I answer any request in a timely manner.  If you want to contact me faster, please send me a <a target="_blank" href="https://t.me/mitri_dvp"  rel="noopener noreferrer">Telegram</a>.
         </p>
         <form onSubmit={onSubmit} className={styles.form}>
           <div className={styles.head}>
