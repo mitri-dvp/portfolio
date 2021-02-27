@@ -8,7 +8,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   useEffect(() => {
-    window.scrollTo(0, window.scrollY +1)
+    window.scrollTo(0, window.scrollY + 2)
   }, [])
 
   return (

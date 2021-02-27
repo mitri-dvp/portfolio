@@ -122,7 +122,7 @@
 
 .project .thumbnail img {
   width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all .25s cubic-bezier(.25,.46,.45,.94);
 }
 

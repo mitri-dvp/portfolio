@@ -39,7 +39,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
-.tools_wrapper a {
+.tools_wrapper .game {
   background-image: linear-gradient(170deg, #3329ff, #060895);
   width: 100%;
   height: 100%;
@@ -61,8 +61,13 @@
   transform: scale(1.05);
 }
 
-.tools_wrapper h3 {
+.tools_wrapper .link {
+  display: block;
   text-align: center;
   margin-top: 2rem;
   color: #060895;
 }
+.tools_wrapper .link:hover {
+  text-decoration: underline;
+}
+
