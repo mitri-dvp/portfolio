@@ -22,7 +22,7 @@ export default function Projects() {
         <div ref={projectsRef} className={styles.projects_wrapper}>
           <div className={styles.project}>
             <div className={styles.content}>
-              <h1>Online Shop</h1>
+              <h1>E-Shop</h1>
               <h2>#E-commerce</h2>
               <p>An online store platform. It features a <strong>Beautiful UI</strong> that allows clients, with the help of a <strong>Shopping Cart</strong>, to select and buy products securely. It also uses a <strong>CMS</strong> with custom controllers to manage perfectly all purchases and inventory.</p>
               <ul>
