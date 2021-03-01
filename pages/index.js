@@ -15,6 +15,7 @@ export default function Home() {
     <div className={styles.wrapper}>
       <Head>
         <title>mitri.dvp | Full-Stack Developer</title>
+        <meta name="google-site-verification" content="gPQZKSnJWApmajiOJUPLAXEwH8fLcntHdP8_kRENIpA" />
         <meta name="description" content="Hello, i’m Jorge Mitri, a Full-Stack Developer. I love building solutions for my clients, find out how I make things happen!"/>
         <link rel="icon" href="icon.svg" />
       </Head>
