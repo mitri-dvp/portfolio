@@ -115,7 +115,7 @@
   opacity: 0.8;
 }
 .mobile_nav {
-  visibility: hidden;
+  display: none;
   width: 100%;
   z-index: 10;
   position: absolute;
@@ -161,7 +161,7 @@
   opacity: 0.8;
 }
 .fixed_nav {
-  visibility: hidden;
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -205,10 +205,10 @@
 
 @media only screen and (max-width: 960px) {
   .main_nav, .side_nav ul {
-    visibility: hidden;
+    display: none;
   }
   .mobile_nav, .fixed_nav{
-    visibility: visible;
+    display: block;
   }
 }
 @media only screen and (max-width: 800px) {

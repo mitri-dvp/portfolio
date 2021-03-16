@@ -103,9 +103,16 @@
   }
 }
 @media (max-width: 800px) {
+
+}
+@media only screen and (max-width: 500px) {
   .services_wrapper {
-    /* margin: 0 auto;
+    margin: 0 auto;
     margin-top: 7rem;
-    max-width: 85%; */
+    max-width: 85%;
+  }
+  .icon {
+    padding: 0.5rem;
   }
 }
+

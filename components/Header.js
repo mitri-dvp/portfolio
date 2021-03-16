@@ -94,6 +94,7 @@ export default function Header() {
           <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
           <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
           <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
+          <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
         </ul>
       </div>
     </>

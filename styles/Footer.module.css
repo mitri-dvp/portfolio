@@ -83,3 +83,26 @@
     padding: 5rem 5rem;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    padding: 2.5rem;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .logo_wrapper {
+    margin-bottom: 4rem;
+    justify-self: center;
+  }
+  .bars {
+    justify-self: center;
+  }
+  .bars .lists {
+    gap: 5rem;
+  }
+  .copy {
+    margin-top: 4rem;
+    text-align: center;
+  }
+}

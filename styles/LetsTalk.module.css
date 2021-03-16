@@ -14,14 +14,13 @@
 }
 
 .wrapper.active {
-  padding-left: 0px;
+  /* padding-left: 0px; */
   opacity: 1;
   z-index: 11;
 }
 
 .wrapper .body_wrapper {
-  width: max-content;
-  height: max-content;
+  max-width: 100%;
   margin: auto;
 }
 .wrapper .body {
@@ -31,7 +30,7 @@
   /* background-image: linear-gradient(170deg, #3329ff, #060895); */
   /* background-image: linear-gradient(170deg, #fff, #fff); */
   background-color: #fff;
-  width: 40rem;
+  max-width: 40rem;
   /* min-height: 30rem; */
   padding: 5rem;
   margin: auto;
@@ -130,4 +129,10 @@
   cursor: pointer;
 }
 .form button:hover {
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper .body {
+    padding: 2.5rem;
+  }
 }
