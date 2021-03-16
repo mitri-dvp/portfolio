@@ -11,10 +11,11 @@
 }
 
 .image_wrapper {
+  /* border: 1px solid aqua; */
   min-height: 100vh;
   width: 100%;
   position: relative;
-  display: flex;
+  display: grid;
   align-items: center;
 }
 .image_wrapper img {
@@ -37,8 +38,6 @@
   transform: translateY(-12%);
   animation: icon-right 5s infinite;
   transition: opacity .4s cubic-bezier(.25,.46,.45,.94), left .3s cubic-bezier(.25,.46,.45,.94);
-
-
 }
 .image_wrapper img.a_right {
   left: 28%;
@@ -46,46 +45,98 @@
 }
 
 .content {
+  /* border: 1px solid aqua; */
   position: absolute;
   top: 50%;
-  left: 50%;
-  width: 50%;
+  left: 45%;
+  margin-right: 5rem;
   transform: translateY(-50%);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: grid;
   gap: 1rem;
-  /* border: 1px solid green; */
 }
 
 .content p {
   font-family: Nexa-Light;
 }
 
-
-
 /* ANIMATION */
 
 @keyframes icon-left {
   0% {
-    transform: translateY(13%);
+    transform: translateY(14%);
   }
   50% {
-    transform: translateY(11%);
+    transform: translateY(10%);
   }
   100% {
-    transform: translateY(13%);
+    transform: translateY(14%);
   }
 }
 
 @keyframes icon-right {
   0% {
-    transform: translateY(-11%);
+    transform: translateY(-10%);
   }
   50% {
-    transform: translateY(-13%);
+    transform: translateY(-14%);
   }
   100% {
-    transform: translateY(-11%);
+    transform: translateY(-10%);
   }
 }
 
+@media (max-width: 1040px) {
+  .wrapper {
+    padding: 0 2rem;
+  }
+  .content {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .image_wrapper img:first-child {
+    left: 10%;
+  }
+  .image_wrapper img.a_left {
+    left: 7%;
+  }
+  .image_wrapper img:last-child {
+    left: 18%;
+  }
+  .image_wrapper img.a_right {
+    left: 21%;
+  }
+  .content {
+    top: 50%;
+    left: 50%;
+    width: 57%;
+    transform: translateY(-50%) translateX(-20%);
+    font-size: 1.35rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .image_wrapper img:first-child {
+    left: 2rem;
+  }
+  .image_wrapper img.a_left {
+    left: 1rem;
+  }
+  .image_wrapper img:last-child {
+    left: 6rem;
+  }
+  .image_wrapper img.a_right {
+    left: 7rem;
+  }
+  .content {
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    margin-left: 15%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 1.1rem;
+    justify-self: flex-end;
+  }
+}

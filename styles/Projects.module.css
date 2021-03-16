@@ -34,12 +34,6 @@
   gap: 5rem;
 }
 .project {
-  border-radius: 0rem;
-  background-color: #888;
-  background-color: #040435;
-  background-color: #060895;
-  background-color: #3329ff;
-  background-image: linear-gradient(170deg, #3329ff, #332980);
   background-image: linear-gradient(170deg, #3329ff, #060895);
   color: #fff;
   padding: 3rem;
@@ -58,7 +52,6 @@
   width: 80%;
   display: flex;
   flex-direction: column;
-  /* border: 1px solid green; */
 }
 
 .project .content h1 {
@@ -116,16 +109,50 @@
   height: max-content;
   margin: auto;
   width: 100%;
-  /* border: 1px solid green; */
-  /* transform: skewY(10deg) scale(0.75); */
 }
 
 .project .thumbnail img {
   width: 100%;
-  /* cursor: pointer; */
   transition: all .25s cubic-bezier(.25,.46,.45,.94);
 }
 
 .project .thumbnail img:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 1040px) {
+  .wrapper {
+    padding: 5rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .projects_wrapper {
+    gap: 2rem;
+  }
+  .project {
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .project .thumbnail {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .project {
+    display: grid;
+    gap: 3rem;
+    padding: 3rem;
+    margin: auto;
+  }
+  .project .thumbnail {
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .project .content {
+    /* max-width: 30rem; */
+    width: 100%;
+    margin: auto;
+  }
+
 }

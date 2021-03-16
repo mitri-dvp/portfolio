@@ -1,10 +1,5 @@
 .wrapper {
-  background-color: #333;
-  background-color: #060895;
-  background-color: #030443;
-  background-color: #010223;
   background-color: #040435;
-  
   color: #f4f4f4;
   font-family: Nexa-Light;
   position: relative;
@@ -80,4 +75,11 @@
 
 .copy {
   margin-top: 2rem;
+}
+
+@media (max-width: 1040px) {
+  .wrapper {
+    margin-top: 5rem;
+    padding: 5rem 5rem;
+  }
 }

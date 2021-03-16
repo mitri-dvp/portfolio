@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
     <LetsTalk props={{showModal, openModal}}/>
-    <div className={`${styles.wrapper}`}>
+    <div className={`${styles.main_nav}`}>
       <nav>
       <ul>
         <li>
@@ -47,8 +47,8 @@ export default function Header() {
         </li>
         <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
         <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
-        <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>tools</a></li>
-        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>games</a></li>
+        <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
+        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
         {/* <a>Games</a> */}
         {/* <a>About</a> */}
         <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
@@ -63,13 +63,39 @@ export default function Header() {
         <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
         <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
         <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
-        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>games</a></li>
+        <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
         {/* <a>Games</a>
         <a>About</a> */}
         <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
       </ul>
       </nav>
     </div>
+    <div className={styles.mobile_nav}>
+      <nav>
+      <ul className={styles.primary}>
+        <li>
+          <a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>
+            <p>mitri.dvp</p>
+          </a>
+        </li>
+        <li>
+          <button onClick={(e) => setOpen(!open)}><img src="/svgs/burger-dark.svg" alt="mitri-dvp-logo"/></button>
+        </li>
+      </ul>
+      </nav>
+    </div>
+    <div className={`${styles.fixed_nav} ${open ? '' : styles.open}`}>
+        <ul>
+          <li>
+          <button onClick={(e) => setOpen(!open)}><img src="/svgs/burger-light.svg" alt="mitri-dvp-logo"/></button>
+          </li>
+          <li><a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>Top</a></li>
+          <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
+          <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
+          <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
+          <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
+        </ul>
+      </div>
     </>
 
   )

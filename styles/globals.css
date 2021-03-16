@@ -58,3 +58,14 @@ img {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+@media only screen and (max-width: 960px) {
+  :root {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  }
+}

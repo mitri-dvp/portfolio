@@ -12,7 +12,7 @@ export default function Games() {
         <h1 className={styles.title}>Games</h1>
         <p className={styles.sub_title}>Want to have fun?</p>
 
-        <div className={`${styles.tools_wrapper}`}>
+        <div className={`${styles.games_wrapper}`}>
           <div className={styles.game}>
             <a rel="noopener noreferrer" href='https://mitri-dvp.github.io/JavaScript-Whack-A-Mole/' target='_blank'><img src="/imgs/mole.png" alt="mole"/></a>
             <a className={styles.link} rel="noopener noreferrer" href='https://mitri-dvp.github.io/JavaScript-Whack-A-Mole/' target='_blank'><h3>Whack-A-Mole</h3></a>
