@@ -89,11 +89,46 @@ export default function Header() {
           <li>
           <button onClick={(e) => setOpen(!open)}><img src="/svgs/burger-light.svg" alt="mitri-dvp-logo"/></button>
           </li>
-          <li><a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>Top</a></li>
-          <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
-          <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
-          <li><a href={"#tools"} onClick={(e) => goToSection(e, '#tools')}>Tools</a></li>
-          <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
+          <li>
+            <a  href={"#hero"} 
+                onClick={(e) => {
+                  goToSection(e, '#hero')
+                  setOpen(true)
+                }}
+            >Top</a>
+          </li>
+          <li>
+            <a  href={"#projects"}
+                onClick={(e) => {
+                  goToSection(e, '#projects')
+                  setOpen(true)
+                }}
+            >Projects</a>
+          </li>
+          <li>
+            <a  href={"#services"}
+                onClick={(e) => {
+                  goToSection(e, '#services')
+                  setOpen(true)
+                }}
+            >Services</a>
+          </li>
+          <li>
+            <a  href={"#tools"}
+                onClick={(e) => {
+                  goToSection(e, '#tools')
+                  setOpen(true)
+                }}
+            >Tools</a>
+          </li>
+          <li>
+            <a  href={"#games"}
+                onClick={(e) => {
+                  goToSection(e, '#games')
+                  setOpen(true)
+                }}
+            >Games</a>
+          </li>
           <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
         </ul>
       </div>
