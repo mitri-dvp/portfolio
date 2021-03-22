@@ -22,7 +22,7 @@ export default async (req, res) => {
     // E-mail Configuration
     const mail = {
       to: 'mitri.dvp@gmail.com',
-      from: 'Mitri.dvp <mitri-dev@mitri-dev.xyz>',
+      from: `${name} <mitri-dev@mitri-dev.xyz>`,
       subject: 'Correo del Portafolio',
       text: ` Name: ${name}, Email: ${email}, Message: ${message}.`,
       html: `
