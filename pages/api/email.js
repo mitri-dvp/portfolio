@@ -1,5 +1,5 @@
 const sendGrid = require('@sendgrid/mail')
-const API_KEY = process.env.SENDGRID_API_KEY
+const API_KEY = process.env.NEXT_PUBLIC_SENDGRID_API_KEY
 sendGrid.setApiKey(API_KEY)
 
 export default async (req, res) => {
