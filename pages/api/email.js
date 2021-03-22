@@ -33,14 +33,13 @@ export default async (req, res) => {
       padding: 2rem;
       ">
         <div style="margin-bottom: 1.5rem;">
-          <h4 style="margin-top: 0;text-align: center;">Message:</h4>
-          <p>
+          <p style="text-align: center;">
             ${message}
           </p>
         </div>
         <hr style="color: #00000020;">
         <div style="margin-top: 1.5rem;text-align: center;">
-          ${name} <br/>
+          <b>${name}</b> <br/>
           ${email} <br/>
         </div>
       </div>`
