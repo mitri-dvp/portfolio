@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from '../styles/Header.module.css'
 
 import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
@@ -8,6 +8,7 @@ export default function Header() {
   const [fixed, setFixed] = useState(false)
   const [open, setOpen] = useState(true)
   const [showModal, setShowModal] = useState(false)
+  const [loaded, setLoaded] = useState(false)
 
   const openModal = async (open) => {
     if(open) {
@@ -27,6 +28,10 @@ export default function Header() {
     }
   })
 
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   const goToSection = (e, section) => {
     e.preventDefault()
     if(!document.querySelector(section)) return
@@ -35,7 +40,7 @@ export default function Header() {
   
   return (
     <>
-    <LetsTalk props={{showModal, openModal}}/>
+    {loaded && <LetsTalk props={{showModal, openModal}}/>}
     <div className={`${styles.main_nav}`}>
       <nav>
       <ul>

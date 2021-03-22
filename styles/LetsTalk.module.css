@@ -36,7 +36,7 @@
   margin: auto;
   margin-bottom: 2rem;
   transform: translateY(-10vh);
-  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+  transition: all .2s cubic-bezier(.25,.46,.45,.94);
 }
 
 .wrapper.active .body {
@@ -93,8 +93,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
-.form textarea, 
-.form input {
+.input_group {display: grid;}
+
+.input_group textarea, 
+.input_group input {
   width: 100%;
   font-family: Nexa-Light;
   font-size: 1rem;
@@ -103,18 +105,32 @@
   border: 0;
   border-bottom: 1px solid #060895;
   outline: none;
+  box-shadow: none;
+  grid-row: 2;
+  transition: all .2s cubic-bezier(.25,.46,.45,.94);
 }
-.form label {
+.input_group textarea {resize: none;height: 10rem;}
+
+.error textarea, 
+.error input {
+  border-bottom: 1px solid #d00;
+}
+.error textarea ~ label, 
+.error input ~ label {
+  color: #d00;
+}
+.input_group label {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
   display: block;
+  transition: all .2s cubic-bezier(.25,.46,.45,.94);
+}
+.input_group label:invalid {
+  color: #d00;
 }
 
-.form textarea {
-  resize: none;
-}
 
 .form button {
   text-transform: uppercase;
@@ -127,8 +143,10 @@
   border-radius: 5rem;
   border: 0;
   cursor: pointer;
+  transition: all .2s cubic-bezier(.25,.46,.45,.94);
 }
-.form button:hover {
+.form button.success {
+  background-color: #2bb22b; /* 43% */
 }
 
 @media only screen and (max-width: 600px) {
