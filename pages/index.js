@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>mitri.dvp | Full-Stack Developer</title>
         <meta name="description" content="Hello, i’m Jorge Mitri, a Full-Stack Developer. I love building solutions for my clients, find out how I make things happen!"/>
-        <meta name="image" content="/imgs/thumbnail.png" />
+        <meta name="image" content="https://www.mitri-dev.xyz/imgs/thumbnail.png" />
         <meta name="viewport" content="width=device-width,minimum-scale=1" /> 
         <link rel="icon" href="icon.svg" />
 
@@ -26,7 +26,7 @@ export default function Home() {
         <meta property="og:description" content="Hello, i’m Jorge Mitri, a Full-Stack Developer. I love building solutions for my clients, find out how I make things happen!"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mitri-dev.xyz/" /> 
-        <meta property="og:image" content="/imgs/thumbnail.png" /> 
+        <meta property="og:image" content="https://www.mitri-dev.xyz/imgs/thumbnail.png" /> 
         <meta property="og:image:alt" content="mitri-dvp-thumbnail" /> 
         <meta property="og:title" content="mitri.dvp" /> 
 
@@ -34,7 +34,7 @@ export default function Home() {
         <meta name="twitter:site" content="@mitri_dvp" />
         <meta property="twitter:title" content="mitri.dvp | Full-Stack Developer" /> 
         <meta name="twitter:description" content="Hello, i’m Jorge Mitri, a Full-Stack Developer. I love building solutions for my clients, find out how I make things happen!" />
-        <meta name="twitter:image" content="/imgs/thumbnail.png" />
+        <meta name="twitter:image" content="https://www.mitri-dev.xyz/imgs/thumbnail.png" />
 
         <meta name="google-site-verification" content="gPQZKSnJWApmajiOJUPLAXEwH8fLcntHdP8_kRENIpA" />
       </Head>
