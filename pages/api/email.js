@@ -11,7 +11,7 @@ export default async (req, res) => {
 
     // Validating Data
     if(!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g) || name === '' || message === '') {
-      console.log('Bad Request: ', body)
+      console.log('Bad request.')
       return res.status(404).json({
         status : 404,
         message: "Bad request",
@@ -22,7 +22,7 @@ export default async (req, res) => {
     // E-mail Configuration
     const mail = {
       to: 'mitri.dvp@gmail.com',
-      from: `${name} <mitri-dev@mitri-dev.xyz>`,
+      from: `${name} <portfolio@mitri-dvp.com>`,
       subject: 'Correo del Portafolio',
       text: ` Name: ${name}, Email: ${email}, Message: ${message}.`,
       html: `
@@ -47,7 +47,7 @@ export default async (req, res) => {
 
     // Send Mail Intent
     const result = await sendGrid.send(mail).catch((error) => {
-      console.log('Mail Error:', error)
+      console.log('Mail Error.')
     });
 
     // Error Catcher
@@ -60,7 +60,7 @@ export default async (req, res) => {
     }
     
     // Success Logger
-    console.log('Mail sent: ', result)
+    console.log('Mail sent.')
     return res.status(200).json({
       status : 200,
       message: "Mail sent",

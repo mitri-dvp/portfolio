@@ -59,6 +59,10 @@ img {
   -ms-user-select: none;
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 960px) {
   :root {
     font-size: 15px;

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Content from '../components/Content'
@@ -8,7 +8,18 @@ import styles from '../styles/Home.module.css'
 import { URL_ORIGIN } from '../utils/links'
 
 export default function Home() {
+  const [start, setStart] = useState(false)
+  const lastImageLoadedRef = useRef()
+
+  const handleLoad = () => {
+    console.log('Images Loaded')
+    setTimeout(() => {
+      setStart(true)
+    }, 100);
+  }
+
   useEffect(() => {
+    if (lastImageLoadedRef.current.complete) handleLoad()
     window.scrollTo(0, window.scrollY + 2)
     window.scrollTo(0, window.scrollY - 2)
   }, [])
@@ -42,8 +53,10 @@ export default function Home() {
       </Head>
       
       <Header/>
-      <Content/>
-      <Footer/>
+      <Content start={start}/>
+      <Footer />
+
+      <img ref={lastImageLoadedRef} onLoad={handleLoad} className='hidden' src="/svgs/loaded.svg" alt=""/>
     </div>
   )
 }

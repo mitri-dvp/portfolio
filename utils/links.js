@@ -1,1 +1,1 @@
-export const URL_ORIGIN = 'https://www.mitri-dev.xyz'
+export const URL_ORIGIN = 'https://www.mitri-dvp.com'

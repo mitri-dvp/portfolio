@@ -1,9 +1,7 @@
 import React from 'react'
 import styles from '../styles/Footer.module.css'
-// import { LinkedInSVG } from '../utils/svgs'
 
 export default function Footer() {
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
