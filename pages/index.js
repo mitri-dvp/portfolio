@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
+import { URL_ORIGIN } from '../utils/links'
 import Head from 'next/head'
+
 import Header from '../components/Header'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
+import Modal from '../components/Modal'
+
 import styles from '../styles/Home.module.css'
 
-import { URL_ORIGIN } from '../utils/links'
 
 export default function Home() {
   const [start, setStart] = useState(false)
@@ -51,10 +54,13 @@ export default function Home() {
 
         <meta name="google-site-verification" content="gPQZKSnJWApmajiOJUPLAXEwH8fLcntHdP8_kRENIpA" />
       </Head>
+
       
       <Header/>
       <Content start={start}/>
       <Footer />
+
+      <Modal/>
 
       <img ref={lastImageLoadedRef} onLoad={handleLoad} className='hidden' src="/svgs/loaded.svg" alt=""/>
     </div>

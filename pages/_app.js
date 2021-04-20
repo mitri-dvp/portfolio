@@ -1,8 +1,11 @@
 import '../styles/globals.css'
+import { ModalProvider } from '../context/ModalContext'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Component {...pageProps} />
+    <ModalProvider>
+      <Component {...pageProps} />
+    </ModalProvider>
   )
 }
 

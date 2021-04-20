@@ -1,24 +1,15 @@
-import { useState, useEffect } from 'react'
-import styles from '../styles/Header.module.css'
+import { useContext, useState } from 'react'
+import ModalContext from '../context/ModalContext'
 
 import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
-import LetsTalk from './LetsTalk';
+
+import styles from '../styles/Header.module.css'
 
 export default function Header() {
   const [fixed, setFixed] = useState(false)
-  const [open, setOpen] = useState(true)
-  const [showModal, setShowModal] = useState(false)
-  const [loaded, setLoaded] = useState(false)
+  const [openSideNav, setOpenSideNav] = useState(true)
 
-  const openModal = async (open) => {
-    if(open) {
-      document.body.classList.add('modal-open')
-      setShowModal(true)
-    } else {
-      document.body.classList.remove('modal-open')
-      setShowModal(false)
-    }
-  }
+  const { open, setOpen } = useContext(ModalContext)
 
   useScrollPosition(({ currPos }) => {
     if((currPos.y*-1) > window.innerHeight - 16*6) {
@@ -28,10 +19,6 @@ export default function Header() {
     }
   })
 
-  useEffect(() => {
-    setLoaded(true)
-  }, [])
-
   const goToSection = (e, section) => {
     e.preventDefault()
     if(!document.querySelector(section)) return
@@ -40,7 +27,6 @@ export default function Header() {
   
   return (
     <>
-    {loaded && <LetsTalk props={{showModal, openModal}}/>}
     <div className={`${styles.main_nav}`}>
       <nav>
       <ul>
@@ -56,14 +42,14 @@ export default function Header() {
         <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
         {/* <a>Games</a> */}
         {/* <a>About</a> */}
-        <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
+        <li onClick={() => setOpen(true)}><div>Let's Talk</div></li>
       </ul>
       </nav>
     </div>
-    <div className={`${styles.side_nav} ${fixed && styles.side_nav_fixed} ${open && styles.side_nav_open}`}>
+    <div className={`${styles.side_nav} ${fixed && styles.side_nav_fixed} ${openSideNav && styles.side_nav_open}`}>
     <nav>
       <ul>
-        <button onClick={(e) => setOpen(!open)}><img src="/icon.svg" alt="mitri-dvp-logo"/></button>
+        <button onClick={(e) => setOpenSideNav(!openSideNav)}><img src="/icon.svg" alt="mitri-dvp-logo"/></button>
         <li><a href={"#hero"} onClick={(e) => goToSection(e, '#hero')}>Top</a></li>
         <li><a href={"#projects"} onClick={(e) => goToSection(e, '#projects')}>Projects</a></li>
         <li><a href={"#services"} onClick={(e) => goToSection(e, '#services')}>Services</a></li>
@@ -71,7 +57,7 @@ export default function Header() {
         <li><a href={"#games"} onClick={(e) => goToSection(e, '#games')}>Games</a></li>
         {/* <a>Games</a>
         <a>About</a> */}
-        <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
+        <li onClick={() => setOpen(true)}><div>Let's Talk</div></li>
       </ul>
       </nav>
     </div>
@@ -84,21 +70,21 @@ export default function Header() {
           </a>
         </li>
         <li>
-          <button onClick={(e) => setOpen(!open)}><img src="/svgs/burger-dark.svg" alt="mitri-dvp-logo"/></button>
+          <button onClick={(e) => setOpenSideNav(!openSideNav)}><img src="/svgs/burger-dark.svg" alt="mitri-dvp-logo"/></button>
         </li>
       </ul>
       </nav>
     </div>
-    <div className={`${styles.fixed_nav} ${open ? '' : styles.open}`}>
+    <div className={`${styles.fixed_nav} ${openSideNav ? '' : styles.open}`}>
         <ul>
           <li>
-          <button onClick={(e) => setOpen(!open)}><img src="/svgs/burger-light.svg" alt="mitri-dvp-logo"/></button>
+          <button onClick={(e) => setOpenSideNav(!openSideNav)}><img src="/svgs/burger-light.svg" alt="mitri-dvp-logo"/></button>
           </li>
           <li>
             <a  href={"#hero"} 
                 onClick={(e) => {
                   goToSection(e, '#hero')
-                  setOpen(true)
+                  setOpenSideNav(true)
                 }}
             >Top</a>
           </li>
@@ -106,7 +92,7 @@ export default function Header() {
             <a  href={"#projects"}
                 onClick={(e) => {
                   goToSection(e, '#projects')
-                  setOpen(true)
+                  setOpenSideNav(true)
                 }}
             >Projects</a>
           </li>
@@ -114,7 +100,7 @@ export default function Header() {
             <a  href={"#services"}
                 onClick={(e) => {
                   goToSection(e, '#services')
-                  setOpen(true)
+                  setOpenSideNav(true)
                 }}
             >Services</a>
           </li>
@@ -122,7 +108,7 @@ export default function Header() {
             <a  href={"#tools"}
                 onClick={(e) => {
                   goToSection(e, '#tools')
-                  setOpen(true)
+                  setOpenSideNav(true)
                 }}
             >Tools</a>
           </li>
@@ -130,11 +116,11 @@ export default function Header() {
             <a  href={"#games"}
                 onClick={(e) => {
                   goToSection(e, '#games')
-                  setOpen(true)
+                  setOpenSideNav(true)
                 }}
             >Games</a>
           </li>
-          <li><a onClick={() => openModal(true)}>Let's Talk</a></li>
+          <li onClick={() => setOpen(true)}><div>Let's Talk</div></li>
         </ul>
       </div>
     </>

@@ -3,6 +3,7 @@ import Projects from './Projects'
 import Services from './Services'
 import Tools from './Tools'
 import Games from './Games'
+import LetsTalk from './LetsTalk'
 import styles from '../styles/Content.module.css'
 
 export default function Content({start}) {
@@ -13,6 +14,7 @@ export default function Content({start}) {
       <Services/>
       <Tools/>
       <Games/>
+      <LetsTalk/>
     </div>
   )
 }
