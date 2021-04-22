@@ -12,7 +12,6 @@ export default function ProjectItem(props) {
 
   useScrollPosition(({ currPos }) => {
     const project = projectRef.current;
-    console.log(project)
     if((project.offsetTop + 120) < ((currPos.y*-1) + window.innerHeight))  {
       project.classList.add(styles.show)
     }
@@ -30,7 +29,10 @@ export default function ProjectItem(props) {
           <a rel="noopener noreferrer" target="_blank" href={demo} className={styles.live_demo}>live demo</a>
         </>)
         :
+        (<>
+          <img src={image.src} alt={image.alt}/>
           <div className={`${styles.live_demo} ${styles.null}`}>live demo</div>
+        </>)
         }
       </div>
       )}
@@ -52,7 +54,10 @@ export default function ProjectItem(props) {
           <a rel="noopener noreferrer" target="_blank" href={demo} className={styles.live_demo}>live demo</a>
         </>)
         :
+        (<>
+          <img src={image.src} alt={image.alt}/>
           <div className={`${styles.live_demo} ${styles.null}`}>live demo</div>
+        </>)
         }
       </div>
       )}
