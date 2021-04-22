@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react'
-import ModalContext from '../context/ModalContext'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
+import ModalContext from '../context/ModalContext'
 import { useScrollPosition } from '../hooks/useScrollPosition.tsx'
 
 import styles from '../styles/Header.module.css'
@@ -8,6 +10,9 @@ import styles from '../styles/Header.module.css'
 export default function Header() {
   const [fixed, setFixed] = useState(false)
   const [openSideNav, setOpenSideNav] = useState(true)
+
+  const router = useRouter()
+  const isHome = router.pathname === '/'
 
   const { open, setOpen } = useContext(ModalContext)
 
@@ -24,6 +29,43 @@ export default function Header() {
     if(!document.querySelector(section)) return
     scrollTo(0, document.querySelector(section).offsetTop - 16*0)
   }
+  if(!isHome) return (
+<>
+    <div className={`${styles.main_nav}`}>
+      <nav>
+      <ul>
+        <li>
+          <Link href="/">
+            <a><p>mitri.dvp</p></a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a>Homepage</a>
+          </Link>
+        </li>
+      </ul>
+      </nav>
+    </div>
+    
+    <div className={styles.mobile_nav}>
+      <nav>
+      <ul className={styles.primary}>
+        <li>
+        <Link href="/">
+          <a>mitri.dvp</a>
+        </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a><button><img src="/svgs/house.svg" alt="mitri-dvp-logo"/></button></a>
+          </Link>
+        </li>
+      </ul>
+      </nav>
+    </div>
+    </>
+  )
   
   return (
     <>
@@ -124,6 +166,5 @@ export default function Header() {
         </ul>
       </div>
     </>
-
   )
 }

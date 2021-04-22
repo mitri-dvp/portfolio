@@ -1,0 +1,114 @@
+.project {
+  background-image: linear-gradient(170deg, #3329ff, #060895);
+  color: #fff;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 45% auto;
+  gap: 1rem;
+  width: 100%;
+}
+
+.project .content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project .content h1 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.project .content p {
+  color: #fff; 
+  font-size: 1.1rem;
+  font-family: Nexa-Light;
+  line-height: 1.5rem;
+}
+.project .content p strong,
+.project .content p a{
+  color: #fff;
+  font-weight: bold;
+}
+.project .content p a{
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+  text-decoration: underline;
+}
+.project .content p a:hover{
+  opacity: 0.8;
+}
+.project .content ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  gap: 1rem;
+}
+.project .content li {
+  cursor: default;
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #3329ff;
+  box-shadow: 0 2px 4px 0px #00000030;
+}
+
+.project .thumbnail {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.project .thumbnail img {
+  max-height: 7.5rem;
+  max-width: 100%;
+  transition: all .25s cubic-bezier(.25,.46,.45,.94);
+}
+.project .thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+.project .live_demo {
+  width: max-content;
+  color: #fff;
+  border-radius: 50rem;
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  background-color: #e44436;
+  cursor: pointer;
+}
+
+.project .live_demo.null {
+  color: #fff;
+  background-color: #b2b2b2;
+  cursor: default;
+}
+
+@media only screen and (max-width: 960px) {
+  .project {
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .project .thumbnail {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .project {
+    display: grid;
+    gap: 3rem;
+    padding: 3rem;
+    margin: auto;
+  }
+  .project .thumbnail {
+    grid-row: 1/2;
+    width: 100%;
+  }
+  .project .content {
+    /* max-width: 30rem; */
+    width: 100%;
+    margin: auto;
+  }
+
+}

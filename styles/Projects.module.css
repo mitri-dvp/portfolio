@@ -4,6 +4,7 @@
   max-width: 70rem;
   margin: auto;
 }
+
 .title {
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -33,91 +34,16 @@
   justify-content: center;
   gap: 5rem;
 }
-.project {
-  background-image: linear-gradient(170deg, #3329ff, #060895);
-  color: #fff;
-  padding: 3rem;
-  min-height: 20rem;
-  display: flex;
-  gap: 2rem;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: all .25s cubic-bezier(.25,.46,.45,.94);
-}
-.project.show {
-  opacity: 1;
-  transform: translateY(0%);
-}
-.project .content {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-}
 
-.project .content h1 {
-  font-size: 1.75rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-}
-.project .content h2 {
-  font-size: 1.5rem;
-  font-family: Nexa-Light;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-}
-.project .content p {
-  color: #bbb; 
-  font-size: 1.2rem;
-  font-family: Nexa-Light;
-  letter-spacing: 1px;
-  line-height: 1.75rem;
-  margin-bottom: 2.5rem;
-}
-.project .content p strong,
-.project .content p a{
-  color: #fff;
-  font-weight: bold;
-}
-.project .content p a{
-  transition: all .25s cubic-bezier(.25,.46,.45,.94);
-  text-decoration: underline;
-}
-.project .content p a:hover{
-  opacity: 0.8;
-}
-.project .content ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: auto;
-  gap: 1rem;
-}
-.project .content li {
-  cursor: default;
-  border-radius: 50rem;
-  padding: 0.5rem 1rem;
-  background-color: #fff;
-  color: #3329ff;
-  box-shadow: 0 2px 4px 0px #00000030;
-}
-
-.project .thumbnail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: max-content;
-  margin: auto;
-  width: 100%;
-}
-
-.project .thumbnail img {
-  width: 100%;
-  transition: all .25s cubic-bezier(.25,.46,.45,.94);
-}
-
-.project .thumbnail img:hover {
-  transform: scale(1.05);
+.more {
+  display: block;
+  margin-top: 1rem;
+  margin-left: auto;
+  width: max-content;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 1040px) {
@@ -130,29 +56,4 @@
   .projects_wrapper {
     gap: 2rem;
   }
-  .project {
-    gap: 2rem;
-    padding: 2rem;
-  }
-  .project .thumbnail {
-    width: 70%;
-  }
-}
-@media (max-width: 800px) {
-  .project {
-    display: grid;
-    gap: 3rem;
-    padding: 3rem;
-    margin: auto;
-  }
-  .project .thumbnail {
-    grid-row: 1/2;
-    width: 100%;
-  }
-  .project .content {
-    /* max-width: 30rem; */
-    width: 100%;
-    margin: auto;
-  }
-
 }

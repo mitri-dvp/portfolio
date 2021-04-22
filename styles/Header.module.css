@@ -26,7 +26,7 @@
 .main_nav nav li:first-child a{
   display: flex;
 }
-.main_nav nav li:first-child p{
+.main_nav nav li:first-child > *{
   align-self: center;
   letter-spacing: 0px;
   font-size: 1.25rem;
@@ -40,7 +40,7 @@
   display: flex;
   text-transform: none;
 }
-.main_nav nav li:last-child {
+.main_nav nav li:last-child > * {
   background-color: #3329ff;
   color: #fff;
   font-size: 0.8rem;
@@ -138,7 +138,7 @@
 .mobile_nav .primary:first-child a{
   display: flex;
 }
-.mobile_nav .primary:first-child p{
+.mobile_nav .primary:first-child > *{
   align-self: center;
   letter-spacing: 0px;
   font-size: 1.25rem;
