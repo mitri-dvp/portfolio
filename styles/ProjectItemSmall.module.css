@@ -3,7 +3,7 @@
   color: #fff;
   padding: 1.5rem;
   display: grid;
-  grid-template-columns: 45% auto;
+  grid-template-columns: max-content auto;
   gap: 1rem;
   width: 100%;
 }
@@ -86,29 +86,23 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .project {
+  /* .project {
     gap: 2rem;
     padding: 2rem;
   }
   .project .thumbnail {
     width: 70%;
+  } */
+}
+@media (max-width: 450px) {
+  .project .thumbnail img {
+    max-height: 6.5rem;
+    max-width: 100%;
   }
 }
-@media (max-width: 800px) {
-  .project {
-    display: grid;
-    gap: 3rem;
-    padding: 3rem;
-    margin: auto;
+@media (max-width: 400px) {
+  .project .thumbnail img {
+    max-height: 5.5rem;
+    max-width: 100%;
   }
-  .project .thumbnail {
-    grid-row: 1/2;
-    width: 100%;
-  }
-  .project .content {
-    /* max-width: 30rem; */
-    width: 100%;
-    margin: auto;
-  }
-
 }
